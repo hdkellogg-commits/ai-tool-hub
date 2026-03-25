@@ -3,6 +3,7 @@ export interface AIDesignTool {
   name: string;
   url: string;
   description: string;
+  longDescription?: string;
   bestFor: string;
   category: string;
 }

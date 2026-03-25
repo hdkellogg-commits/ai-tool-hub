@@ -26,19 +26,19 @@ export default function App() {
   const workflowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const fetchModules = async () => {
+    const fetchTools = async () => {
       try {
-        const response = await fetch('/api/modules');
+        const response = await fetch('/api/tools');
         if (!response.ok) throw new Error('Failed to fetch');
         const data = await response.json();
         setTools(data);
       } catch (error) {
-        console.error('Error loading modules:', error);
+        console.error('Error loading tools:', error);
       } finally {
         setIsLoading(false);
       }
     };
-    fetchModules();
+    fetchTools();
   }, []);
 
   const selectedTool = tools.find(t => t.id === selectedToolId);
@@ -55,9 +55,9 @@ export default function App() {
   }, [h1, h2]);
 
   const categories = [
-    { name: 'Coding', icon: <Code /> },
+    { name: 'Inspiration', icon: <Lightbulb /> },
     { name: 'Design', icon: <Palette /> },
-    { name: 'Inspiration', icon: <Lightbulb /> }
+    { name: 'Coding', icon: <Code /> }
   ];
 
   const handleSearchChange = (category: string, query: string) => {
@@ -76,7 +76,7 @@ export default function App() {
           AI Knowledge Terminal
         </motion.h1>
         <p className="text-text-dim text-xs font-orbitron tracking-[2px] mt-2 opacity-50 uppercase">
-          Select a module to initialize analysis
+          Select a tool to initialize analysis
         </p>
       </header>
 
@@ -112,7 +112,7 @@ export default function App() {
                         {cat.icon}
                       </div>
                       <h2 className="font-orbitron text-xs uppercase tracking-widest text-text-main">
-                        {cat.name} Modules
+                        {cat.name} Tools
                       </h2>
                     </header>
 
@@ -151,7 +151,7 @@ export default function App() {
                         )}
                         {!isLoading && filteredTools.length === 0 && (
                           <li className="opacity-30 italic text-xs text-center py-8">
-                            No matching modules
+                            No matching tools
                           </li>
                         )}
                       </ul>
@@ -177,7 +177,7 @@ export default function App() {
                   <div className="h-px flex-1 bg-linear-to-r from-[var(--clr1)]/50 to-transparent" />
                   <h2 className="font-orbitron text-[var(--clr1)] uppercase tracking-wider text-xl flex items-center gap-2">
                     <Terminal className="w-5 h-5" />
-                    Module Analysis
+                    Tool Analysis
                   </h2>
                   <div className="h-px flex-1 bg-linear-to-l from-[var(--clr1)]/50 to-transparent" />
                 </div>
@@ -254,8 +254,13 @@ export default function App() {
                           <h4 className="font-orbitron text-xs uppercase tracking-widest">Description</h4>
                         </div>
                         <p className="text-text-main text-lg leading-relaxed border-l-2 border-[var(--clr1)]/20 pl-6">
-                          {selectedTool.description || "No description provided for this module."}
+                          {selectedTool.description || "No description provided for this tool."}
                         </p>
+                        {selectedTool.longDescription && (
+                          <div className="mt-4 text-text-dim text-sm leading-relaxed pl-6 border-l-2 border-white/5">
+                            {selectedTool.longDescription}
+                          </div>
+                        )}
                       </div>
 
                       {selectedTool.bestFor && (
@@ -335,7 +340,7 @@ export default function App() {
                           >
                             <div className="flex items-center justify-between mb-1">
                               <span className="text-xs font-orbitron font-bold text-accent-blue uppercase tracking-widest">
-                                {tool?.name || 'Unknown Module'}
+                                {tool?.name || 'Unknown Tool'}
                               </span>
                               <ChevronRight className="w-3 h-3 text-text-dim opacity-0 group-hover/step:opacity-100 transition-opacity" />
                             </div>
@@ -360,7 +365,7 @@ export default function App() {
             className="text-center py-12"
           >
             <p className="text-text-dim font-orbitron text-[0.6rem] tracking-[4px] uppercase opacity-40">
-              Waiting for module selection...
+              Waiting for tool selection...
             </p>
           </motion.div>
         )}

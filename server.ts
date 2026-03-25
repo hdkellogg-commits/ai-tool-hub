@@ -7,15 +7,15 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  // API Route to fetch modules from the JSON "text document"
-  app.get("/api/modules", async (req, res) => {
+  // API Route to fetch tools from the JSON "text document"
+  app.get("/api/tools", async (req, res) => {
     try {
-      const dataPath = path.join(process.cwd(), "modules.json");
+      const dataPath = path.join(process.cwd(), "tools.json");
       const data = await fs.readFile(dataPath, "utf-8");
       res.json(JSON.parse(data));
     } catch (error) {
-      console.error("Error reading modules.json:", error);
-      res.status(500).json({ error: "Failed to load modules" });
+      console.error("Error reading tools.json:", error);
+      res.status(500).json({ error: "Failed to load tools" });
     }
   });
 
