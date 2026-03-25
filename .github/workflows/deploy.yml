@@ -19,10 +19,12 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24 # Updated to Node 24 for 2026 standards
+          node-version: 24
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci # Uses package-lock.json for a faster, reliable build
+        # Use 'npm install' if you don't have a lock file yet, 
+        # but 'npm ci' is better once you upload it!
+        run: npm install 
       - name: Build
         run: npm run build
       - name: Upload artifact
