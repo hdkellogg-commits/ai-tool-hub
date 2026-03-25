@@ -1,0 +1,83 @@
+[
+  {
+    "id": "dribbble",
+    "name": "Dribbble",
+    "category": "Inspiration",
+    "url": "https://dribbble.com/",
+    "description": "tons of beautifully designed websites for inspiration",
+    "longDescription": "Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals. It's a massive community where designers share screenshots (shots) of their work, process, and projects. For web developers, it's an invaluable resource for discovering modern UI trends, color palettes, and layout ideas.",
+    "bestFor": "Getting an idea of what style or elements to use"
+  },
+  {
+    "id": "html-extractor",
+    "name": "HTML Extractor",
+    "category": "Inspiration",
+    "url": "view-page-source.com",
+    "description": "extracts HTML from any site so you can see how things are done",
+    "longDescription": "This tool allows you to peek under the hood of any website. By extracting the HTML and CSS, you can analyze exactly how a specific component, animation, or layout was built. It's like having 'Inspect Element' on steroids, providing a clean view of the source code without the noise of a live browser environment.",
+    "bestFor": "pulling a specific element from a site"
+  },
+  {
+    "id": "codepen",
+    "name": "Codepen",
+    "category": "Inspiration",
+    "url": "https://codepen.io/trending",
+    "description": "code for cool animatins and effects for web elements",
+    "longDescription": "CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration. The 'Trending' section is a goldmine for finding cutting-edge CSS animations, JavaScript effects, and creative UI components that you can fork and adapt.",
+    "bestFor": "adding jaw-dropping features to a site or getting inspired"
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "category": "Design",
+    "url": "https://firecrawl.dev",
+    "description": "An open-source API that crawls websites and converts them into LLM-ready clean Markdown format.",
+    "longDescription": "Firecrawl is designed specifically for the AI era. It crawls any website and turns its content into clean, structured Markdown that is perfectly formatted for Large Language Models. This makes it incredibly easy to 'feed' existing websites into your AI workflows for analysis, summarization, or redesign.",
+    "bestFor": "Converting web content for AI analysis"
+  },
+  {
+    "id": "stitch",
+    "name": "Stitch",
+    "category": "Design",
+    "url": "stitch.withgoogle.com",
+    "description": "sets up site or app layout",
+    "longDescription": "Stitch is a Google-internal tool (often referenced in design circles) that helps streamline the process of moving from a high-level design concept to a functional UI layout. It focuses on the 'stitching' together of components and layouts to ensure consistency and speed in the design-to-development handoff.",
+    "bestFor": "setting up UI layout"
+  },
+  {
+    "id": "ai-studio",
+    "name": "AI Studio",
+    "category": "Coding",
+    "url": "https://aistudio.google.com/",
+    "description": "Web based coding enviroment",
+    "longDescription": "Google AI Studio is a fast, web-based tool for prototyping with Gemini models. It provides an interface for prompt engineering, model tuning, and building simple applications. It's the perfect starting point for developers who want to integrate state-of-the-art AI into their projects without complex local setup.",
+    "bestFor": "simple coding tasks, getting started with an app or website"
+  },
+  {
+    "id": "antigravity",
+    "name": "Antigravity",
+    "category": "Coding",
+    "url": "https://antigravity.google/",
+    "description": "An AI-accelerated, browser-based workflow for building full-stack web and multiplatform applications.",
+    "longDescription": "Antigravity is the next evolution of AI-assisted development. It provides a full-stack environment where you can build, test, and deploy complex applications using natural language. It bridges the gap between a simple prototype and a production-ready application by providing real infrastructure and advanced coding assistance.",
+    "bestFor": "Taking a protoype from AI Studio and making it a real, shippable app"
+  },
+  {
+    "id": "gravity-claw",
+    "name": "gravity claw tool adder",
+    "category": "Coding",
+    "url": "https://gravity-claw.vercel.app/",
+    "description": "Selects a list of tools and generates a prompt to add them to the gravity claw app",
+    "longDescription": "Gravity Claw is a specialized utility designed to augment the capabilities of the Antigravity workflow. It allows users to quickly select from a curated list of tools and libraries, then generates the precise prompts needed to integrate those tools into their current project, saving time on boilerplate setup.",
+    "bestFor": "Generates tool addition prompts"
+  },
+  {
+    "id": "21st-dev",
+    "name": "21st.dev",
+    "category": "Inspiration",
+    "url": "https://21st.dev/community/components",
+    "description": "code for cool animatins and effects for web elements",
+    "longDescription": "21st.dev is a community-driven platform showcasing the next generation of web components. It focuses on high-performance, visually stunning elements that push the boundaries of what's possible with modern web technologies. It's a great place to find unique UI patterns that set your project apart from the standard 'bootstrap' look.",
+    "bestFor": "adding jaw-dropping features to a site or getting inspired"
+  }
+]
